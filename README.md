@@ -127,7 +127,7 @@ Connect WEGASUN-M6 to PC and open M6SSE-IDE, set the baud rate ,recognition mode
   CUR_CORE ?= arcem7d
   ```
 
-- DEV config
+- DEV options
 
   ```
   EXT_DEV_LIST += ble/hm1x
