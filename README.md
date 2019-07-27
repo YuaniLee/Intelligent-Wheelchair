@@ -159,3 +159,4 @@ Connect WEGASUN-M6 to PC and open M6SSE-IDE, set the baud rate ,recognition mode
   override EMBARC_ROOT := $(strip $(subst \,/,$(EMBARC_ROOT)))
   include $(EMBARC_ROOT)/options/options.mk
   ```
+`make run`
