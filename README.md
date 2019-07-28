@@ -93,13 +93,13 @@ And replace following files：
  
  - 
 
-  [dw_uart_obj.h (board\emsk\drivers)][dw_uart_obj.h (board\emsk\drivers)]
+  dw_uart_obj.h (board\emsk\drivers)[dw_uart_obj.h (board\emsk\drivers)]
 
   [dw_uart_obj.h(board\emsk\drivers)]: https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/dw_uart_obj.h
 
 
 
-  [dw_uart_obj.c (board\emsk\drivers)][dw_uart_obj.c (board\emsk\drivers)]
+  dw_uart_obj.c (board\emsk\drivers)[dw_uart_obj.c (board\emsk\drivers)]
 
   [dw_uart_obj.c(board\emsk\drivers)]: https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/dw_uart_obj.c
 
