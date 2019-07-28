@@ -29,11 +29,11 @@ cloud computing.
 
 ### System Architecture
 
-https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/frame.png
+[frame.png](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/frame.png)
 
 ### APP UI
 
-https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/HMSoft.png
+[](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/HMSoft.png)
 
 ## HW/SW Setup
 
