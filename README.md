@@ -8,32 +8,32 @@ Bluetooth. The feature of this application is front-end processing rather than
 cloud computing.
 
 - [Introduction](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#introduction)
-  - [Function](###Function)
-  - System Architecture
-  - APP UI
-- HW/SW Setup
-  - Required Hardware
-  - Required Software
-  - Hardware Connection
-- User manual
+  - [Function](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#function)
+  - [System Architecture](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#system-architecture)
+  - [APP UI](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#app-ui)
+- [HW/SW Setup](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#hwsw-setup)
+  - [Required Hardware](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#required-hardware)
+  - [Required Software](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#required-software)
+  - [Hardware Connection](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#hardware-connection)
+- [User manual](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#user-manual)
+  - [Before Running This Application](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#before-running-this-application)
+  - [Run This Application](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/README.md#run-this-application)
 
 ## Introduction
 
 ### Function
 
-Voice control through front-end processing
-
-Communicate with APP 
-
-Collision auto-avoidance and warning system
+- Voice control through front-end processing
+- Communicate with APP 
+- Collision auto-avoidance and warning system
 
 ### System Architecture
 
-![](C:\Users\Yuani\Desktop\图片1.png)
+https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/frame.png
 
 ### APP UI
 
-![](C:\Users\Yuani\Desktop\图片2.png)
+https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/HMSoft.png
 
 ## HW/SW Setup
 
@@ -78,7 +78,7 @@ Collision auto-avoidance and warning system
 
 In order to open  **UART2** we need to modify following files
 
-- emsk_init.c (board\emsk\common)
+- Modify mux.c (/board/emsk/common/emsk_init.c)
 
 ```
 set_pmod_mux(PM1_UR_UART_0 | PM1_LR_SPI_S	\
@@ -89,30 +89,37 @@ set_pmod_mux(PM1_UR_UART_0 | PM1_LR_SPI_S	\
 				| PM6_UR_GPIO_C | PM6_LR_GPIO_A );
 ```
 
-And replace following files：
- 
-[dw_uart_obj.h(board\emsk\drivers)](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/dw_uart_obj.h)
+- Replace following files:
 
-[dw_uart_obj.c(board\emsk\drivers)](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/dw_uart_obj.c)
+  [dw_uart_obj.h(board\emsk\drivers)](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/dw_uart_obj.h )
 
-### Run This Application
+  [dw_uart_obj.c(board\emsk\drivers)](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/dw_uart_obj.c)
 
 #### Speech recognition config
 
-![WEGASUN-M6](C:\Users\Yuani\Desktop\图片3.jpg)
+Connect WEGASUN-M6 to PC by USB to serial port
 
-Connect WEGASUN-M6 to PC and open M6SSE-IDE, set the baud rate ,recognition mode, recognition distance and so on. Set your keywords to recognition.
+https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/HMSoft.png
+
+Open M6SE-IDE with the following settings:
+
+https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/M6SE-IDE.JPG
+
+| Settings                 | Specification                                                |
+| ------------------------ | ------------------------------------------------------------ |
+| @Baud#9600$              | Baud rate                                                    |
+| @AsrSET#1,4,06000,6000,$ | data1: recognized distance(20 cm)；data2: match degree; data3: waiting time; data4: recording time |
 
 #### Build and run
 
-|       file       |                                  |
-| :--------------: | -------------------------------- |
-|      ble.c       | Bluetooth control                |
-|       M6.c       | Voice control                    |
-|     buzzer.c     | Warning system                   |
-| driver_control.c | Control L298N drive motor        |
-|      main.c      | Main entry of embARC Application |
-|     makefile     | Makefile of embARC Application   |
+| file             | function                             |
+| :--------------- | ------------------------------------ |
+| ble.c            | Bluetooth initialization and control |
+| M6.c             | Voice initialization and control     |
+| buzzer.c         | Warning system                       |
+| driver_control.c | Control L298N drive motor            |
+| main.c           | Main entry of embARC Application     |
+| makefile         | Makefile of embARC Application       |
 
 
 
@@ -128,7 +135,7 @@ Connect WEGASUN-M6 to PC and open M6SSE-IDE, set the baud rate ,recognition mode
   CUR_CORE ?= arcem7d
   ```
 
-- DEV options
+- DEV config
 
   ```
   EXT_DEV_LIST += ble/hm1x
@@ -160,4 +167,5 @@ Connect WEGASUN-M6 to PC and open M6SSE-IDE, set the baud rate ,recognition mode
   override EMBARC_ROOT := $(strip $(subst \,/,$(EMBARC_ROOT)))
   include $(EMBARC_ROOT)/options/options.mk
   ```
-`make run`
+
+Then`make run`
