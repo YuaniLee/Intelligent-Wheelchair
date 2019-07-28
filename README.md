@@ -21,6 +21,8 @@ cloud computing.
 
 ## Introduction
 
+![wheelchair.jpg](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/wheelchair.jpg)
+
 ### Function
 
 - Voice control through front-end processing
@@ -72,6 +74,8 @@ cloud computing.
 - Connect L298N motor driver to J6
 - Connect Speaker and MIC to WEGASUN-M6
 
+![hardware.png](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/hardware.png)
+
 ## User Manual
 
 ### Before Running This Application
@@ -99,7 +103,7 @@ set_pmod_mux(PM1_UR_UART_0 | PM1_LR_SPI_S	\
 
 Connect WEGASUN-M6 to PC by USB to serial port
 
-![M6.jpg](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/HMSoft.png)
+![M6.jpg](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/M6.jpg)
 
 Open M6SE-IDE with the following settings:
 
@@ -169,3 +173,7 @@ Open M6SE-IDE with the following settings:
   ```
 
 Then`make run`
+
+## Video
+
+Show video
