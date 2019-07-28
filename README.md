@@ -99,11 +99,11 @@ set_pmod_mux(PM1_UR_UART_0 | PM1_LR_SPI_S	\
 
 Connect WEGASUN-M6 to PC by USB to serial port
 
-[M6.jpg](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/HMSoft.png)
+![M6.jpg](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/HMSoft.png)
 
 Open M6SE-IDE with the following settings:
 
-[M6SE-IDE](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/M6SE-IDE.JPG)
+![M6SE-IDE](https://github.com/YuaniLee/Intelligent-Wheelchair/blob/master/doc/picture/M6SE-IDE.JPG)
 
 | Settings                 | Specification                                                |
 | ------------------------ | ------------------------------------------------------------ |
