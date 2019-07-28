@@ -7,8 +7,8 @@ the application has a collision- avoidance and warning system. Wheelchair  also 
 Bluetooth. The feature of this application is front-end processing rather than
 cloud computing.
 
-- [Introduction](##Introduction)
-  - Function
+- [Introduction](## Introduction)
+  - [Function](### Function)
   - System Architecture
   - APP UI
 - HW/SW Setup
